@@ -11,6 +11,71 @@
     rel="stylesheet">
 <title>SCT-254-028/2021 JOMO WINNIE AYITSO</title>
 <link rel="stylesheet" href="styles.css">
+<style>
+  body {
+    color: #ffffff;
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .enquiry-form {
+    margin: 50px auto;
+    max-width: 80%;
+    text-align: center;
+    background-color: #121212;
+    padding: 50px;
+    border-radius: 20px;
+    font-size: larger;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+    font-size: 48px;
+  
+  }
+
+  table {
+    width: 100%;
+  }
+
+  label {
+    font-weight: bold;
+    font-size: larger;
+  }
+
+  input[type="text"],
+  input[type="email"]
+   {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #292929;
+    color: #ffffff;
+    font-size: 42px;
+    outline: none;
+  }
+
+   input[type="submit"] {
+    background-color: #1c5f35;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 15px 30px; 
+    font-size: 34px; 
+    border-radius: 12px; 
+    text-transform: uppercase; 
+    font-weight: bold;
+  }
+  input[type="submit"]:hover {
+    background-color: #155026;
+  }
+</style>
+
+
 </head>
 <body>
   
@@ -27,6 +92,37 @@
       </ul>
       <hr>
     </div>
-    <h1>ENQUIRIES</h1>
+    <div class="enquiry-form">
+        <form >
+          <h1>Product Enquiry Form</h1>
+          <table>
+            <tr>
+              <td><label for="name">Your Name:</label></td>
+              <td><input type="text" id="name" name="name" ></td>
+            </tr>
+            <tr>
+              <td><label for="email">Your Email:</label></td>
+              <td><input type="email" id="email" name="email" ></td>
+            </tr>
+            <tr>
+              <td><label for="product">Product Name:</label></td>
+              <td><input type="text" id="product" name="product" ></td>
+            </tr>
+            <tr>
+              <td>
+                <label for="question">Your Question or Comment:</label><br />
+              </td>
+              <td><input type="text" id="message" name="message"></td>
+            </tr>
+            <tr>
+              <td colspan="2"><input type="submit" value="Submit"></td>
+            </tr>
+           
+             
+          </table>
+        </form>
+
+    </div>
+   
 </body>
 </html>

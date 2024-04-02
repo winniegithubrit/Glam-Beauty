@@ -110,3 +110,39 @@
 .btn input[type="button"]:hover {
   background-color: #155026;
 }
+/* styling for the about page */
+.content {
+  width: 90%;
+  height: 670px;
+  overflow: hidden;
+  margin: auto;
+  position: relative;
+}
+
+.content img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: -1000px;
+
+}
+.details  h1{
+  color: black;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 70px;
+  font-weight: bolder;
+}
+.details h2{
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+}
