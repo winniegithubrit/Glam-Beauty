@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,120 +10,142 @@
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
     rel="stylesheet">
-<title>SCT-254-028/2021 JOMO WINNIE AYITSO</title>
-<link rel="stylesheet" href="styles.css">
-<style>
-  body {
-    color: #ffffff;
-    font-family: 'DM Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-
-  .enquiry-form {
-    margin: 50px auto;
-    max-width: 80%;
-    text-align: center;
-    background-color: #121212;
-    padding: 50px;
-    border-radius: 20px;
-    font-size: larger;
-  }
-
-  h1 {
-    margin-bottom: 10px;
-    font-size: 48px;
+  <title>SCT-254-028/2021 JOMO WINNIE AYITSO</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      color: #ffffff;
+      font-family: 'DM Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
   
-  }
+    .enquiry-form {
+      margin: 50px auto;
+      max-width: 80%;
+      text-align: center;
+      background-color: #121212;
+      padding: 50px;
+      border-radius: 20px;
+      font-size: larger;
+    }
+  
+    h1 {
+      margin-bottom: 10px;
+      font-size: 48px;
+  
+    }
+  
+    table {
+      width: 100%;
+    }
+  
+    label {
+      font-weight: bold;
+      font-size: larger;
+    }
+  
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 15px;
+      border: 2px solid #ffffff;
+      border-radius: 10px;
+      box-sizing: border-box;
+      background-color: #292929;
+      color: #ffffff;
+      font-size: 42px;
+      outline: none;
+    }
+  
+    input[type="submit"] {
+      background-color: #1c5f35;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      padding: 15px 30px;
+      font-size: 34px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  
+    input[type="submit"]:hover {
+      background-color: #155026;
+    }
+  </style>
+<script language="JavaScript">
+  document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('enquiryForm').addEventListener('submit', function (event) {
+      // Preventing default form submission
+      event.preventDefault();
 
-  table {
-    width: 100%;
-  }
+      // Retrieving form input values
+      var name = document.getElementById('name').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var product = document.getElementById('product').value.trim();
+      var message = document.getElementById('message').value.trim();
 
-  label {
-    font-weight: bold;
-    font-size: larger;
-  }
-
-  input[type="text"],
-  input[type="email"]
-   {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 15px;
-    border: 2px solid #ffffff;
-    border-radius: 10px;
-    box-sizing: border-box;
-    background-color: #292929;
-    color: #ffffff;
-    font-size: 42px;
-    outline: none;
-  }
-
-   input[type="submit"] {
-    background-color: #1c5f35;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    padding: 15px 30px; 
-    font-size: 34px; 
-    border-radius: 12px; 
-    text-transform: uppercase; 
-    font-weight: bold;
-  }
-  input[type="submit"]:hover {
-    background-color: #155026;
-  }
-</style>
-
+      // Doing the required validation here
+      if (name === '' || email === '' || product === '') {
+        alert('Please fill out all required fields');
+        return;
+      }
+      alert('Form submitted successfully');
+    });
+  });
+</script>
 
 </head>
+
 <body>
-  
-    <div class="navbar">
-      <ul>
+
+  <div class="navbar">
+    <ul>
       <li>
         <h1 class="heading"><span class="glam">GLAM</span></h1>
         <div class="subheading">Beauty Store</div>
       </li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html"> Our Products</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+    <hr>
+  </div>
 
-        <li><a href="index.html">Home</a></li>
-        <li><a href="product.html"> Our Products</a></li>
-        <li><a href="about.html">About Us</a></li>
-      </ul>
-      <hr>
-    </div>
-    <div class="enquiry-form">
-        <form >
-          <h1>Product Enquiry Form</h1>
-          <table>
-            <tr>
-              <td><label for="name">Your Name:</label></td>
-              <td><input type="text" id="name" name="name" ></td>
-            </tr>
-            <tr>
-              <td><label for="email">Your Email:</label></td>
-              <td><input type="email" id="email" name="email" ></td>
-            </tr>
-            <tr>
-              <td><label for="product">Product Name:</label></td>
-              <td><input type="text" id="product" name="product" ></td>
-            </tr>
-            <tr>
-              <td>
-                <label for="question">Your Question or Comment:</label><br />
-              </td>
-              <td><input type="text" id="message" name="message"></td>
-            </tr>
-            <tr>
-              <td colspan="2"><input type="submit" value="Submit"></td>
-            </tr>
-           
-             
-          </table>
-        </form>
+  <div class="enquiry-form">
+    <form id="enquiryForm">
+      <h1>Product Enquiry Form</h1>
+      <table>
+        <tr>
+          <td><label for="name">Your Name:</label></td>
+          <td><input type="text" id="name" name="name"></td>
+        </tr>
+        <tr>
+          <td><label for="email">Your Email:</label></td>
+          <td><input type="email" id="email" name="email"></td>
+        </tr>
+        <tr>
+          <td><label for="product">Product Name:</label></td>
+          <td><input type="text" id="product" name="product"></td>
+        </tr>
+        <tr>
+          <td><label for="message">Your Question or Comment:</label></td>
+          <td><input type="text" id="message" name="message"></td>
+        </tr>
+        <tr>
+          <td><input type="submit" value="Submit"></td>
+        </tr>
+      </table>
+    </form>
+  </div>
 
-    </div>
-   
+
 </body>
+
 </html>
+
+
+
+
